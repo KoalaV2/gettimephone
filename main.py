@@ -24,6 +24,7 @@ def main():
     with open(f'{year}.png', 'wb') as out_file:
         shutil.copyfileobj(response_image.raw,out_file)
     del response_image
-    print(url_image)
+    print(url_image,'\n')
+    print(f"Image saved as {year}.png")
 if __name__=="__main__":
     main()
