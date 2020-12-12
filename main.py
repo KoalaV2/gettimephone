@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
+import scrapy
 
-URL = "https://gettime.ga"
 def main():
+    name = 'gettimescrape'
+    URL = ["https://gettime.ga"
+
     print("Hello world")
 
 
