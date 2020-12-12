@@ -4,6 +4,7 @@ import urllib3.request
 import time
 from bs4 import BeautifulSoup
 import shutil
+from PIL import Image
 def main():
     year = input("Which year are you in? \n :")
     url = f'https://gettime.ga/schema/{year}'
@@ -25,6 +26,12 @@ def main():
         shutil.copyfileobj(response_image.raw,out_file)
     del response_image
     print(url_image,'\n')
-    print(f"Image saved as {year}.png")
+    file_name = f"{year}.png"
+    print(file_name)
+    print(f"Image saved as {file_name}")
+    
+    print("Opening image now..")
+    image_schedule = Image.open("20_el_a.png")
+    image_schedule.show()   
 if __name__=="__main__":
     main()
