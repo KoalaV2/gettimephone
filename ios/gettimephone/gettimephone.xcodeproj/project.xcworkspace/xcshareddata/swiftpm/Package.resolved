@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": "master",
+          "revision": "9e0328127dfb801cefe8ac53a13c0c90a7770448",
+          "version": null
+        }
+      },
+      {
+        "package": "Kanna",
+        "repositoryURL": "https://github.com/tid-kijyun/Kanna.git",
+        "state": {
+          "branch": "master",
+          "revision": "9760f64323b97eb97391a6a20ff352216f2907f2",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftSoup",
+        "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
+        "state": {
+          "branch": "master",
+          "revision": "05eec922678a28b308c55c745dd1da88de0faa9f",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
