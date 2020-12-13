@@ -11,14 +11,21 @@ import SwiftSoup
 
 func webscrape(){
         do {
-            if let url = URL(string: "https://gettime.ga/schema/20_el_a") {
+            if let url = URL(string: "https://gettime.ga/schema/vm-20_el_a") {
                 do {
-//                    let className = "schemaWeekDesktop"
                     let contents = try String(contentsOf: url)
-                    //print(contents)
                     let doc: Document = try SwiftSoup.parse(contents)
-                    let schema: Element = try doc.select("img[src$=.png]").first()!
-                    print(schema)
+                    for element in try doc.select("img").array(){
+                        let image_link = try element.attr("src")
+                        let full_link = URL(string: "https://gettime.ga"+image_link)!
+                        print(full_link)
+                        let data = try? Data(contentsOf: full_link)
+                        if let imageData = data {
+                            let image = UIImage(data: imageData)
+                            print(image!)
+                        }
+
+                    }
                 } catch {
                     print("Contents could not be loaded")
                 }
