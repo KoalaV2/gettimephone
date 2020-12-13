@@ -18,8 +18,7 @@ func webscrape(){
                     //print(contents)
                     let doc: Document = try SwiftSoup.parse(contents)
                     let schema: Element = try doc.select("img[src$=.png]").first()!
-                    let schema_image = try schema.text()
-                    print(schema_image)
+                    print(schema)
                 } catch {
                     print("Contents could not be loaded")
                 }
